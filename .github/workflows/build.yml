@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 env:
-  PROJECT_NAME: HousingDeMort
+  PROJECT_NAME: HDMPlugin
 
 jobs:
   build:
