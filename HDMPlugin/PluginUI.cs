@@ -204,7 +204,7 @@ namespace HDMPlugin
         else if (memory.HousingStructure->ActiveItem == null || memory.HousingStructure->Mode != HousingLayoutMode.Rotate)
         {
           DrawError("Select a housing item in Rotate mode");
-          ImGuiComponents.HelpMarker("Are you doing everything right? Try using the /bdth debug command and report this issue in Discord!");
+          ImGuiComponents.HelpMarker("Are you doing everything right? Try using the /hdm debug command and report this issue in Discord!");
         }
         else
           DrawItemControls();
@@ -230,7 +230,7 @@ namespace HDMPlugin
           memory.InventoryVisible = dummyInventory;
 
         if (ImGui.Button("Open Furnishing List"))
-          Plugin.CommandManager.ProcessCommand("/bdth list");
+          Plugin.CommandManager.ProcessCommand("/hdm list");
         DrawTooltip(new[]
         {
           "Opens a furnishing list that you can use to sort by distance and click to select objects.",
@@ -325,12 +325,12 @@ namespace HDMPlugin
       {
         ImGui.PushItemWidth(73f);
         {
-          DrawDragCoord("##bdth-xdrag", ref memory.position.X);
-          DrawDragCoord("##bdth-ydrag", ref memory.position.Y);
-          DrawDragCoord("##bdth-zdrag", ref memory.position.Z);
+          DrawDragCoord("##hdm-xdrag", ref memory.position.X);
+          DrawDragCoord("##hdm-ydrag", ref memory.position.Y);
+          DrawDragCoord("##hdm-zdrag", ref memory.position.Z);
           ImGui.Text("position");
 
-          DrawDragRotate("##bdth-rydrag", ref memory.rotation.Y);
+          DrawDragRotate("##hdm-rydrag", ref memory.rotation.Y);
           ImGui.Text("rotation");
         }
         ImGui.PopItemWidth();
@@ -345,10 +345,10 @@ namespace HDMPlugin
         ImGui.EndTooltip();
       }
 
-      DrawInputCoord("x coord##bdth-x", ref memory.position.X, ref lockX);
-      DrawInputCoord("y coord##bdth-y", ref memory.position.Y, ref lockY);
-      DrawInputCoord("z coord##bdth-z", ref memory.position.Z, ref lockZ);
-      DrawInputRotate("ry degree##bdth-ry", ref memory.rotation.Y);
+      DrawInputCoord("x coord##hdm-x", ref memory.position.X, ref lockX);
+      DrawInputCoord("y coord##hdm-y", ref memory.position.Y, ref lockY);
+      DrawInputCoord("z coord##hdm-z", ref memory.position.Z, ref lockZ);
+      DrawInputRotate("ry degree##hdm-ry", ref memory.rotation.Y);
     }
 
     public unsafe void DrawGizmo()
@@ -394,7 +394,7 @@ namespace HDMPlugin
       ImGui.SetNextWindowViewport(vp.ID);
 
       ImGui.Begin("HDMGizmo", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoDocking | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoInputs);
-      ImGui.BeginChild("##BDTHGizmoChild", new Vector2(-1, -1), false, ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoInputs);
+      ImGui.BeginChild("##HDMGizmoChild", new Vector2(-1, -1), false, ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoInputs);
 
       ImGuizmo.SetDrawlist();
 
