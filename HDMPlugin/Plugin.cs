@@ -23,9 +23,9 @@ namespace BDTHPlugin
 {
   public class Plugin : IDalamudPlugin
   {
-    public string Name => "Burning Down the House";
+    public string Name => "Housing De Mort";
 
-    private const string commandName = "/bdth";
+    private const string commandName = "/hdm";
 
     [PluginService] public static DalamudPluginInterface PluginInterface { get; private set; } = null!;
     [PluginService] public static DataManager Data { get; private set; } = null!;
