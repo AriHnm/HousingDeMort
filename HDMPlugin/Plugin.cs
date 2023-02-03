@@ -19,7 +19,7 @@ using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
 
-namespace BDTHPlugin
+namespace HDMPlugin
 {
   public class Plugin : IDalamudPlugin
   {
