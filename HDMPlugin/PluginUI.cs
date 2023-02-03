@@ -5,7 +5,7 @@ using ImGuizmoNET;
 using System;
 using System.Numerics;
 
-namespace BDTHPlugin
+namespace HDMPlugin
 {
   public class PluginUI
   {
@@ -153,7 +153,7 @@ namespace BDTHPlugin
         resetWindow = false;
       }
 
-      if (ImGui.Begin($"Burning Down the House##BDTH", ref visible, ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.NoResize))
+      if (ImGui.Begin($"Housing De Mort##HDM", ref visible, ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.NoResize))
       {
         ImGui.BeginGroup();
 
@@ -384,7 +384,7 @@ namespace BDTHPlugin
 
       // Gizmo setup.
       ImGuizmo.Enable(!memory.HousingStructure->Rotating);
-      ImGuizmo.SetID("BDTHPlugin".GetHashCode());
+      ImGuizmo.SetID("HDMPlugin".GetHashCode());
 
       ImGuizmo.SetOrthographic(false);
 
@@ -393,7 +393,7 @@ namespace BDTHPlugin
       ImGui.SetNextWindowPos(vp.Pos, ImGuiCond.Always);
       ImGui.SetNextWindowViewport(vp.ID);
 
-      ImGui.Begin("BDTHGizmo", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoDocking | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoInputs);
+      ImGui.Begin("HDMGizmo", ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoDocking | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoInputs);
       ImGui.BeginChild("##BDTHGizmoChild", new Vector2(-1, -1), false, ImGuiWindowFlags.NoBackground | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoNavInputs | ImGuiWindowFlags.NoInputs);
 
       ImGuizmo.SetDrawlist();
@@ -419,7 +419,7 @@ namespace BDTHPlugin
       if (!debugVisible)
         return;
 
-      if (ImGui.Begin("BDTH Debug", ref debugVisible))
+      if (ImGui.Begin("HDM Debug", ref debugVisible))
       {
         ImGui.Text($"Gamepad Mode: {PluginMemory.GamepadMode}");
         ImGui.Text($"CanEditItem: {memory.CanEditItem()}");
