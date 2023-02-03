@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace BDTHPlugin
+namespace HSMPlugin
 {
   public class PluginException : Exception
   {
     public PluginException() { }
-    public PluginException(string message) : base($"BDTH Exception: {message}") { }
+    public PluginException(string message) : base($"HDM Exception: {message}") { }
   }
 }
