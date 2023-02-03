@@ -1,0 +1,12 @@
+{
+  "Author": "AriHnm",
+  "Name": "Housing De Mort",
+  "Description": "Voilà quoi.",
+  "InternalName": "HDMPlugin",
+  "AssemblyVersion": "1.5.8",
+  "RepoUrl": "https://github.com/AriHnm/HousingDeMort",
+  "ApplicableVersion": "any",
+  "Tags": ["hdm", "housing", "AriHnm"],
+  "DalamudApiLevel": 8,
+  "IconUrl": "https://github.com/LeonBlade/BDTHPlugin/raw/main/icon.png"
+}
