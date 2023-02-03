@@ -39,7 +39,7 @@ jobs:
 
       - name: Create artifact
         run: |
-          Compress-Archive -Path "bin/*" -DestinationPath BDTHPlugin.zip
+          Compress-Archive -Path "bin/*" -DestinationPath HDMPlugin.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2.2.1
