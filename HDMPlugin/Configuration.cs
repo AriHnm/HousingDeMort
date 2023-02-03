@@ -1,7 +1,7 @@
 ﻿using Dalamud.Configuration;
 using System;
 
-namespace BDTHPlugin
+namespace HDMPlugin
 {
   [Serializable]
   public class Configuration : IPluginConfiguration
