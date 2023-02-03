@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HSMPlugin
+namespace HDMPlugin
 {
   public class PluginException : Exception
   {
